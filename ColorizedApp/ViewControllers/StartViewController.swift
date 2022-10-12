@@ -7,18 +7,36 @@
 
 import UIKit
 
-
+protocol SettingsViewControllerDelegate {
+    func setNewColor(red: Float, green: Float, blue: Float)
+}
 
 class StartViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    
+    private var colorOfView: UIColor!
+    private var backColor: UIColor!
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationVC = segue.destination as? UINavigationController else { return }
-        guard let settingVC = navigationVC.topViewController as? SettingsViewController else { return }
-        settingVC.colorView.backgroundColor = view.backgroundColor.self
+        guard let settingVC = segue.destination as? SettingsViewController else { return }
+        
+        backColor = view.backgroundColor
+        settingVC.colorOfView = backColor
+        settingVC.colorView?.backgroundColor = backColor
+        settingVC.delegate = self
     }
 }
 
+extension StartViewController: SettingsViewControllerDelegate {
+    func setNewColor(red: Float, green: Float, blue: Float) {
+        view.backgroundColor = UIColor(
+            red: CGFloat(red),
+            green: CGFloat(green),
+            blue: CGFloat(blue),
+            alpha: 1
+        )
+    }
+}
