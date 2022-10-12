@@ -16,13 +16,8 @@ class StartViewController: UIViewController {
     private var colorOfView: UIColor!
     private var backColor: UIColor!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingVC = segue.destination as? SettingsViewController else { return }
-        
         backColor = view.backgroundColor
         settingVC.colorOfView = backColor
         settingVC.colorView?.backgroundColor = backColor

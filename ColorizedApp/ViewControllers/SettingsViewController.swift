@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    
+    // MARK: - IBOutlets
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redLabel: UILabel!
@@ -23,12 +23,14 @@ class SettingsViewController: UIViewController {
     @IBOutlet var greenTextField: UITextField!
     @IBOutlet var blueTextField: UITextField!
     
+    // MARK: - Public var
     var colorOfView: UIColor!
     var delegate: SettingsViewControllerDelegate!
     
+    // MARK: - Override func
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         redTextField.delegate = self
         greenTextField.delegate = self
         blueTextField.delegate = self
@@ -55,17 +57,14 @@ class SettingsViewController: UIViewController {
         
         setColor()
         setValue()
-        
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
-        
     }
     
-    
+    // MARK: - IBAction
     @IBAction func doneButtonPressed() {
         delegate.setNewColor(
             red: redSlider.value,
@@ -89,6 +88,7 @@ class SettingsViewController: UIViewController {
         }
     }
     
+    // MARK: - Private func
     private func setColor() {
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -111,11 +111,9 @@ class SettingsViewController: UIViewController {
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
-
-    
 }
 
-
+// MARK: - Extension
 extension SettingsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newValue = textField.text else { return }
@@ -131,34 +129,5 @@ extension SettingsViewController: UITextFieldDelegate {
             blueSlider.value = numberValue
             blueLabel.text = String(format: "$.2f", numberValue)
         }
-    }
-}
-
-extension UITextField {
-    @IBInspectable var doneAccessory: Bool {
-        get { return self.doneAccessory }
-        set (hasDone) {
-            if hasDone{
-                addDoneButtonOnKeyboard()
-            }
-        }
-    }
-
-    func addDoneButtonOnKeyboard() {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-        doneToolbar.barStyle = .default
-
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
-
-        let items = [flexSpace, done]
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-
-        self.inputAccessoryView = doneToolbar
-    }
-
-    @objc func doneButtonAction() {
-        self.resignFirstResponder()
     }
 }
