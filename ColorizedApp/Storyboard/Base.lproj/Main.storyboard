@@ -83,13 +83,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-3x-Wv0">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-3x-Wv0">
                                                 <rect key="frame" x="0.0" y="44.333333333333343" width="40" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdF-ux-yAb">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdF-ux-yAb">
                                                 <rect key="frame" x="0.0" y="88.666666666666657" width="40" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -109,13 +109,13 @@
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="npV-fu-Hx7"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h6m-jV-wsB">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h6m-jV-wsB">
                                                 <rect key="frame" x="-2" y="43" width="202" height="31"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="LXN-oi-jJc"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FE1-Cy-Z0a">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FE1-Cy-Z0a">
                                                 <rect key="frame" x="-2" y="86" width="202" height="31"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="srU-uP-lBm"/>
@@ -134,7 +134,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6c-5W-6ed">
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6c-5W-6ed">
                                                 <rect key="frame" x="0.0" y="41" width="45" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -142,7 +142,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rft-wd-dAo">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rft-wd-dAo">
                                                 <rect key="frame" x="0.0" y="82" width="45" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -159,7 +159,8 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy8-a1-ukU">
                                 <rect key="frame" x="144" y="581" width="102" height="54.666666666666629"/>
-                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.30236859440000002" blue="0.82464162119999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
@@ -170,7 +171,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
                             <constraint firstItem="cL9-Fs-xVJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9GB-zi-CQd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Vy8-a1-ukU" secondAttribute="trailing" constant="144" id="LEb-6s-zIq"/>
@@ -186,16 +187,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="r7E-hs-43I"/>
                     <connections>
-                        <outlet property="blueLabel" destination="xdF-ux-yAb" id="zYM-b1-uVN"/>
-                        <outlet property="blueSlider" destination="FE1-Cy-Z0a" id="pvy-0D-UdJ"/>
-                        <outlet property="blueTextField" destination="Rft-wd-dAo" id="Lqg-av-NVq"/>
                         <outlet property="colorView" destination="cL9-Fs-xVJ" id="Ga3-Uw-Apt"/>
-                        <outlet property="greenLabel" destination="mbT-3x-Wv0" id="Zei-xc-goF"/>
-                        <outlet property="greenSlider" destination="h6m-jV-wsB" id="M3c-ff-RTm"/>
-                        <outlet property="greenTextField" destination="e6c-5W-6ed" id="EcK-pG-zc4"/>
-                        <outlet property="redLabel" destination="fWY-dj-Rfn" id="Yg3-oT-51z"/>
-                        <outlet property="redSlider" destination="mJw-gd-w4Z" id="HbC-As-TJf"/>
-                        <outlet property="redTextField" destination="jHE-Kd-r4l" id="ymb-DL-Qzm"/>
+                        <outlet property="doneButton" destination="Vy8-a1-ukU" id="k3k-I4-EXa"/>
+                        <outletCollection property="colorValueLabels" destination="fWY-dj-Rfn" collectionClass="NSMutableArray" id="dKv-lf-byb"/>
+                        <outletCollection property="colorValueLabels" destination="mbT-3x-Wv0" collectionClass="NSMutableArray" id="eT3-sp-o6f"/>
+                        <outletCollection property="colorValueLabels" destination="xdF-ux-yAb" collectionClass="NSMutableArray" id="L8e-tC-CdM"/>
+                        <outletCollection property="colorSliders" destination="mJw-gd-w4Z" collectionClass="NSMutableArray" id="hQK-jY-V5u"/>
+                        <outletCollection property="colorSliders" destination="h6m-jV-wsB" collectionClass="NSMutableArray" id="qmM-hy-Phz"/>
+                        <outletCollection property="colorSliders" destination="FE1-Cy-Z0a" collectionClass="NSMutableArray" id="EE1-0w-AFy"/>
+                        <outletCollection property="colorValueTextField" destination="jHE-Kd-r4l" collectionClass="NSMutableArray" id="x8n-t5-s7C"/>
+                        <outletCollection property="colorValueTextField" destination="e6c-5W-6ed" collectionClass="NSMutableArray" id="BXE-3x-hn7"/>
+                        <outletCollection property="colorValueTextField" destination="Rft-wd-dAo" collectionClass="NSMutableArray" id="7CL-ez-kgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -223,11 +225,11 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="122"/>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

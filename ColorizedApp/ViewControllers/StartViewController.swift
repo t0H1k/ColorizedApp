@@ -8,30 +8,20 @@
 import UIKit
 
 protocol SettingsViewControllerDelegate {
-    func setNewColor(red: Float, green: Float, blue: Float)
+    func setNewColor(by color: UIColor)
 }
 
 class StartViewController: UIViewController {
     
-    private var colorOfView: UIColor!
-    private var backColor: UIColor!
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingVC = segue.destination as? SettingsViewController else { return }
-        backColor = view.backgroundColor
-        settingVC.colorOfView = backColor
-        settingVC.colorView?.backgroundColor = backColor
+        settingVC.colorOfView = view.backgroundColor
         settingVC.delegate = self
     }
 }
 
 extension StartViewController: SettingsViewControllerDelegate {
-    func setNewColor(red: Float, green: Float, blue: Float) {
-        view.backgroundColor = UIColor(
-            red: CGFloat(red),
-            green: CGFloat(green),
-            blue: CGFloat(blue),
-            alpha: 1
-        )
+    func setNewColor(by color: UIColor) {
+        view.backgroundColor = color
     }
 }
