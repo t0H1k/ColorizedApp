@@ -105,12 +105,14 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mJw-gd-w4Z">
                                                 <rect key="frame" x="-2" y="0.0" width="202" height="31"/>
+                                                <color key="tintColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="npV-fu-Hx7"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="h6m-jV-wsB">
                                                 <rect key="frame" x="-2" y="43" width="202" height="31"/>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="LXN-oi-jJc"/>
                                                 </connections>
@@ -133,6 +135,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VQh-aX-Z5I"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6c-5W-6ed">
                                                 <rect key="frame" x="0.0" y="41" width="45" height="34"/>
@@ -141,6 +146,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nNH-iq-wOh"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rft-wd-dAo">
                                                 <rect key="frame" x="0.0" y="82" width="45" height="34"/>
@@ -149,6 +157,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RDq-yx-EpL"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -159,14 +170,13 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy8-a1-ukU">
                                 <rect key="frame" x="144" y="581" width="102" height="54.666666666666629"/>
-                                <color key="backgroundColor" red="0.0" green="0.30236859440000002" blue="0.82464162119999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7zW-zR-Y94"/>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="n3m-8d-1dv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -187,22 +197,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="r7E-hs-43I"/>
                     <connections>
+                        <outlet property="blueLabel" destination="xdF-ux-yAb" id="92g-px-tjc"/>
+                        <outlet property="blueSlider" destination="FE1-Cy-Z0a" id="Y8v-PE-MDu"/>
+                        <outlet property="blueTextField" destination="Rft-wd-dAo" id="or1-mx-9Bh"/>
                         <outlet property="colorView" destination="cL9-Fs-xVJ" id="Ga3-Uw-Apt"/>
-                        <outlet property="doneButton" destination="Vy8-a1-ukU" id="k3k-I4-EXa"/>
-                        <outletCollection property="colorValueLabels" destination="fWY-dj-Rfn" collectionClass="NSMutableArray" id="dKv-lf-byb"/>
-                        <outletCollection property="colorValueLabels" destination="mbT-3x-Wv0" collectionClass="NSMutableArray" id="eT3-sp-o6f"/>
-                        <outletCollection property="colorValueLabels" destination="xdF-ux-yAb" collectionClass="NSMutableArray" id="L8e-tC-CdM"/>
-                        <outletCollection property="colorSliders" destination="mJw-gd-w4Z" collectionClass="NSMutableArray" id="hQK-jY-V5u"/>
-                        <outletCollection property="colorSliders" destination="h6m-jV-wsB" collectionClass="NSMutableArray" id="qmM-hy-Phz"/>
-                        <outletCollection property="colorSliders" destination="FE1-Cy-Z0a" collectionClass="NSMutableArray" id="EE1-0w-AFy"/>
-                        <outletCollection property="colorValueTextField" destination="jHE-Kd-r4l" collectionClass="NSMutableArray" id="x8n-t5-s7C"/>
-                        <outletCollection property="colorValueTextField" destination="e6c-5W-6ed" collectionClass="NSMutableArray" id="BXE-3x-hn7"/>
-                        <outletCollection property="colorValueTextField" destination="Rft-wd-dAo" collectionClass="NSMutableArray" id="7CL-ez-kgk"/>
+                        <outlet property="greenLabel" destination="mbT-3x-Wv0" id="lr9-tg-eX0"/>
+                        <outlet property="greenSlider" destination="h6m-jV-wsB" id="sY1-t1-LMI"/>
+                        <outlet property="greenTextField" destination="e6c-5W-6ed" id="yeh-fQ-epF"/>
+                        <outlet property="redLabel" destination="fWY-dj-Rfn" id="ymp-bV-0iP"/>
+                        <outlet property="redSlider" destination="mJw-gd-w4Z" id="Cfu-6C-1aD"/>
+                        <outlet property="redTextField" destination="jHE-Kd-r4l" id="Dxc-0K-frw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="-38"/>
+            <point key="canvasLocation" x="903" y="-38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zTa-DG-PAq">
@@ -220,13 +229,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzz-rS-ljd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-763.07692307692309" y="-38.388625592417057"/>
+            <point key="canvasLocation" x="-565" y="-38"/>
         </scene>
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="122"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
